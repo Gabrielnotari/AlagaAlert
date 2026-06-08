@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1565C0"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Voltar"
+            android:textColor="#BBDEFB"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📝 Reportar Alagamento"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajude sua comunidade com informações em tempo real"
+            android:textColor="#BBDEFB"
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <!-- Card localização -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📍 Localização"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A1A1A"/>
+
+                    <EditText
+                        android:id="@+id/etLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Ex: Rua das Flores, Jabaquara"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        android:background="@android:color/transparent"
+                        android:inputType="text"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"/>
+
+                    <Button
+                        android:id="@+id/btnGetLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="📡 Usar minha localização"
+                        android:backgroundTint="#E3F2FD"
+                        android:textColor="#1565C0"
+                        android:textSize="11sp"
+                        android:layout_marginTop="8dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card nível da água -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💧 Nível da água"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A1A1A"/>
+
+                    <RadioGroup
+                        android:id="@+id/rgWaterLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="8dp">
+
+                        <RadioButton
+                            android:id="@+id/rbCalcada"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🟢  Calçada — água na calçada"
+                            android:textSize="13sp"
+                            android:textColor="#2E7D32"/>
+
+                        <RadioButton
+                            android:id="@+id/rbRua"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🟠  Rua — água na pista"
+                            android:textSize="13sp"
+                            android:textColor="#E65100"
+                            android:layout_marginTop="6dp"/>
+
+                        <RadioButton
+                            android:id="@+id/rbVeiculos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🔴  Veículos — água acima dos carros"
+                            android:textSize="13sp"
+                            android:textColor="#C62828"
+                            android:layout_marginTop="6dp"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card observação -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📝 Observação (opcional)"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A1A1A"/>
+
+                    <EditText
+                        android:id="@+id/etObservation"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:hint="Descreva o que está vendo..."
+                        android:textSize="13sp"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:layout_marginTop="8dp"
+                        android:background="@android:color/transparent"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#E0E0E0"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Botão enviar -->
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="✅  Enviar relato"
+                android:backgroundTint="#1565C0"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
