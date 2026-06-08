@@ -17,7 +17,7 @@ class ReportActivity : AppCompatActivity() {
         binding.tvBack.setOnClickListener { finish() }
 
         binding.btnGetLocation.setOnClickListener {
-            // Simula pegar localização — você pode expandir com GPS real depois
+            // Simula pegar localização — expandir com GPS real depois
             binding.etLocation.setText("São Paulo, SP — Localização atual")
             Toast.makeText(this, "📡 Localização obtida!", Toast.LENGTH_SHORT).show()
         }
@@ -48,7 +48,7 @@ class ReportActivity : AppCompatActivity() {
             return
         }
 
-        // Aqui você poderia enviar para um backend — por ora mostra confirmação
+        // Possibilidade de enviar para um backend — por ora mostra confirmação
         Toast.makeText(
             this,
             "✅ Relato enviado!\nLocal: $location\nNível: $waterLevel",
