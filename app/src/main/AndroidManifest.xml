@@ -16,7 +16,7 @@
         <!-- Chave do Google Maps -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDXVPqzIRIVLqFCfzRtA7-4mOZiHUrBPTc"/>
+            android:value="${MAPS_API_KEY}"/>
 
         <!-- HomeActivity como tela inicial -->
         <activity
